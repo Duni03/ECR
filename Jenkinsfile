@@ -16,8 +16,16 @@ pipeline {
         stage('Docker') {
             steps {
                 script{
-                    echo 'Dokcer'
+                    echo 'Docker'
                     sh 'docker --version'
+                }
+            }
+        }
+        stage('Docker') {
+            steps {
+                script{
+                    echo 'AWS'
+                    sh 'aws --version'
                 }
             }
         }
