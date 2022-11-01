@@ -7,8 +7,7 @@ pipeline {
                 script{
                     echo 'Hello World'
                     git clone 'https://github.com/Duni03/ECR'
-                    sh 'cd ECR'
-                    sh 'ls -a'   
+                    ls
                 }
             }
         }
