@@ -6,8 +6,7 @@ pipeline {
             steps {
                 script{
                     echo 'Hello World'
-                    git clone 'https://github.com/Duni03/ECR'
-                    ls
+                    git branch: 'main', url: 'https://github.com/Duni03/ECR'
                 }
             }
         }
