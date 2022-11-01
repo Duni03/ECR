@@ -25,7 +25,13 @@ pipeline {
             steps {
                 script{
                     echo 'AWS'
-                    sh 'aws --version'
+                    sh '''
+                    aws --version
+                    aws configure set aws_access_key_id AKIAWZHTONJSVBMA5IM7
+                    aws configure set aws_access_secret_key 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
+                    aws configure set region us-east-1
+                    docker build -t test .
+                    '''
                 }
             }
         }
