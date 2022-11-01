@@ -21,7 +21,7 @@ pipeline {
                 }
             }
         }
-        stage('Docker') {
+        stage('aws') {
             steps {
                 script{
                     echo 'AWS'
