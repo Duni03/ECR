@@ -30,9 +30,8 @@ pipeline {
                     aws configure set aws_access_key_id AKIAWZHTONJSVBMA5IM7
                     aws configure set aws_access_secret_key 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
                     aws configure set region us-east-1
-                    sudo su 
-                    docker build -t test .
-                    '''
+                    '''                   
+                    dockerImage = docker.build "${IMAGE_REPO_NAME}:${IMAGE_TAG}"
                 }
             }
         }
