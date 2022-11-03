@@ -39,7 +39,10 @@ pipeline {
                     aws configure set aws_access_key_id AKIAUFWJDGGGD7VAVGFV
                     aws configure set aws_secret_access_key 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
                     aws configure set region us-east-1
+                    docker build -t ecr .
                     aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 287110803852.dkr.ecr.us-east-1.amazonaws.com
+                    docker tag ecr:latest 287110803852.dkr.ecr.us-east-1.amazonaws.com/ecr:latest
+                    docker push 287110803852.dkr.ecr.us-east-1.amazonaws.com/ecr:latest
                     '''
                 }
             }
